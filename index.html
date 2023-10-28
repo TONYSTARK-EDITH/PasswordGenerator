@@ -21,10 +21,6 @@
         border-radius: 2px;
     }
 
-    img.current {
-        box-shadow: 0 0 0 2px white,
-        0 0 0 4px black;
-    }
 
     .mui-select {
         height: 30px;
@@ -49,8 +45,8 @@
 <body>
 <div class="mui-select">
     <!--<label><img src="password.png"></label>-->
-    <label>Length</label>
-    <select id="st">
+    <label for="st">Length</label>
+    <select name="length" id="st">
         <optgroup label="Short Password">
             <option value="8">8</option>
             <option value="16">16</option>
@@ -64,7 +60,9 @@
             <option value="256">256</option>
             <option value="512">512</option>
         </optgroup>
+
     </select>
+
 
 </div>
 <div class="image">
