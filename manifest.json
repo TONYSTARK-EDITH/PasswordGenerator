@@ -1,0 +1,16 @@
+{
+  "name": "Password Generator",
+  "description": "It generates a strong password",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
