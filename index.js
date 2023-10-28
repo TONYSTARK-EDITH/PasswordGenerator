@@ -254,7 +254,6 @@ const setPasswords = length => {
         copyFrom.blur();
         document.body.removeChild(copyFrom);
     }
-    console.log(length);
     const pwd = generateRandomCapitalization(Sha512.hash(new Date().toString()).slice(0, length));
     copyTextToClipboard(pwd)
     document.querySelectorAll("input[type='password']").forEach(e => {
