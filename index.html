@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Generate Password</title>
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css"/>
+    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
 </head>
 <style>
     img {
@@ -20,7 +22,24 @@
     }
 </style>
 <body>
-
+<div class="mui-select">
+    <select id="password-length">
+        <optgroup label="Short Password">
+            <option>8</option>
+            <option>16</option>
+        </optgroup>
+        <optgroup label="Long Password">
+            <option>32</option>
+            <option>64</option>
+            <option>128</option>
+        </optgroup>
+        <optgroup label="Very Long Password">
+            <option>256</option>
+            <option>512</option>
+        </optgroup>
+    </select>
+    <label>Optgroups Example</label>
+</div>
 <img id="gen" src="icons8-data-encryption-36.png" alt="Generate" style="cursor: pointer"/>
 
 
