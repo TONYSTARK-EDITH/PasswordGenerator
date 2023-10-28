@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Generate Password</title>
-    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css"/>
-    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
 </head>
 <style>
+    .image {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
     img {
         height: 30px;
         width: 30px;
@@ -20,27 +25,51 @@
         box-shadow: 0 0 0 2px white,
         0 0 0 4px black;
     }
+
+    .mui-select {
+        height: 30px;
+        outline: none;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    select {
+        padding: 0.4rem;
+        border-radius: 4%;
+        transition: all ease-in-out 1s;
+    }
+
+    select:after, select:focus, select::before {
+        outline: none !important;
+    }
+
 </style>
 <body>
 <div class="mui-select">
-    <select id="password-length">
+    <!--<label><img src="password.png"></label>-->
+    <label>Length</label>
+    <select id="st">
         <optgroup label="Short Password">
-            <option>8</option>
-            <option>16</option>
+            <option value="8">8</option>
+            <option value="16">16</option>
         </optgroup>
         <optgroup label="Long Password">
-            <option>32</option>
-            <option>64</option>
-            <option>128</option>
+            <option value="32" selected>32</option>
+            <option value="64">64</option>
+            <option value="128">128</option>
         </optgroup>
         <optgroup label="Very Long Password">
-            <option>256</option>
-            <option>512</option>
+            <option value="256">256</option>
+            <option value="512">512</option>
         </optgroup>
     </select>
-    <label>Optgroups Example</label>
+
 </div>
-<img id="gen" src="icons8-data-encryption-36.png" alt="Generate" style="cursor: pointer"/>
+<div class="image">
+    <img id="gen" src="icons8-data-encryption-36.png" alt="Generate" style="cursor: pointer"/>
+</div>
 
 
 <script type="text/javascript" src="index.js"></script>
